@@ -21,7 +21,7 @@ export default function removeTask(taskIndex, tasks) {
   if (taskElement) {
     taskElement.remove();
   }
-  
+
   document.getElementById(taskIndex).remove();
 
   return tasks;
