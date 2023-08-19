@@ -11,8 +11,6 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-
-  /* vertical-align:auto; */
 }
 
 #main-container {
@@ -41,12 +39,6 @@ body {
 input {
   border: none;
   width: 95%;
-
-  /* padding: 5px; */
-}
-
-.enter {
-  /* background-color: #000000; */
 }
 
 .task {
@@ -74,9 +66,15 @@ input {
   background-color: #fff;
 }
 
-.clear-completed {
+#clear-completed {
   width: 100%;
   border: none;
   background-color: transparent;
   padding: 5px;
+}
+
+#task-list > li.completed {
+  background-color: gray;
+  text-decoration: line-through;
+  color: red;
 }

@@ -1,70 +1,75 @@
-import './style.css'; // Replace with your actual CSS file path
+import './style.css';
+import createNewTask from './modules/createNewTask.js';
+import removeTask from './modules/removeTask.js';
+import updateTask from './modules/updateTask.js';
+import clearCompletedTasks from './modules/clearCompletedTask.js';
 
-// Array of tasks
-const tasks = [
-  {
-    description: 'Task 1',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Task 2',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Task 3',
-    completed: false,
-    index: 3,
-  },
-];
+const todoForm = document.querySelector('#add-task');
+const todoList = document.querySelector('#task-list');
+const taskInput = document.querySelector('#add-task input');
+const clearCompletedButton = document.querySelector('#clear-completed');
 
-// Function to populate the task list
-function displayTaskList() {
-  const taskList = document.getElementById('task-list');
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-  // Clear any existing tasks
-  taskList.innerHTML = '';
+todoList.addEventListener('keydown', (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    event.target.blur();
+  }
+});
 
-  // Iterate over tasks and create list items
+if (localStorage.getItem('tasks')) {
   tasks.forEach((task) => {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `
-          <input type="checkbox" name="" id="" />
-          <span>${task.description}</span>
-          <svg
-            width="20px"
-            height="20px"
-            viewBox="0 0 24 24"
-            fill="#000000"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="#000000"
-            stroke-width="1.224"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <title></title>
-              <g id="Complete">
-                <g id="F-More">
-                  <path
-                    d="M12,16a2,2,0,1,1-2,2A2,2,0,0,1,12,16ZM10,6a2,2,0,1,0,2-2A2,2,0,0,0,10,6Zm0,6a2,2,0,1,0,2-2A2,2,0,0,0,10,12Z"
-                    id="Vertical"
-                  ></path>
-                </g>
-              </g>
-            </g>
-          </svg>
-        `;
-    listItem.classList.add(task.completed ? 'completed' : 'pending', 'task');
-
-    taskList.appendChild(listItem);
+    const newTaskElement = createNewTask(task);
+    todoList.appendChild(newTaskElement);
   });
 }
 
-// Event listener for page load
-document.addEventListener('DOMContentLoaded', displayTaskList);
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const inputValue = taskInput.value;
+
+  if (inputValue === '') {
+    return;
+  }
+
+  const task = {
+    index: tasks.length + 1,
+    name: inputValue,
+    completed: false,
+  };
+
+  tasks.push(task);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  const newTaskElement = createNewTask(task);
+  todoList.appendChild(newTaskElement);
+
+  todoForm.reset();
+  taskInput.focus();
+}
+
+todoForm.addEventListener('submit', handleSubmit);
+
+function handleTaskClick(event) {
+  if (event.target.classList.contains('remove')) {
+    const taskIndex = event.target.closest('li').id;
+    tasks = removeTask(taskIndex, tasks);
+  }
+}
+
+todoList.addEventListener('click', handleTaskClick);
+
+function handleTaskInput(event) {
+  const taskIndex = event.target.closest('li').id;
+  tasks = updateTask(taskIndex, event.target, tasks);
+}
+
+todoList.addEventListener('input', handleTaskInput);
+
+function handleClearCompleted() {
+  tasks = clearCompletedTasks(tasks, todoList, createNewTask);
+}
+
+clearCompletedButton.addEventListener('click', handleClearCompleted);
