@@ -1,108 +1,179 @@
-# :green_book: Table of Contents
+<a name="readme-top"></a>
 
-- [:book: About the Project](#about-project)
-  - [:hammer_and_wrench: Built With](#built-with)
+<div align="center">
+
+  <h1><b>To Do List
+</b></h1>
+
+</div>
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-- [:computer: Getting Started](#getting-started)
+    - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Project-Presentation](#project-presentation)
-  - [Live-Demo](#live-demo)
-- [:busts_in_silhouette: Authors](#authors)
-- [:telescope: Future Features](#future-features)
-- [:handshake: Contributing](#contributing)
-- [:star:️ Show your support](#support)
-- [:pray: Acknowledgements](#acknowledgements)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# :book: [Awesome Books]
+# 📖 [To Do List] <a name="about-project"></a>
 
-**[Awesome Books]** is a microverse project where we build a basic website that allows users to add/remove books from a list. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events.
+**[To Do List]** A simple web application that allows you to create and manage a to-do list. You can add tasks, mark them as completed, reorder them, and clear completed tasks.
 
-## :hammer_and_wrench: Built With
+## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack
+- Plain JavaScript
 
-**Client**
-HTML, CSS and Javascript
+### Tech Stack <a name="tech-stack"></a>
 
-### Key Features
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Linters</li>
+  <li>JavaScript</li>
+  <li>Webpack</li>
+</ul>
 
-- **[- Set up project with Webpack]**
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://github.com/microverseinc/linters-config">Linters</a></li>
+    <li><a href="https://github.com/microverseinc/linters-config/tree/master/html-css-js">HTML</a></li>
+    <li><a href="https://github.com/microverseinc/linters-config/tree/master/html-css-js">CSS</a></li>
+    <li><a href="https://github.com/microverseinc/linters-config/tree/master/html-css-js">JS</a></li>
+    <li><a href="https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin">webpack</a></li>
+  </ul>
+</details>
 
+<!-- Features -->
 
-## :computer: Getting Started
+### Key Features <a name="key-features"></a>
 
-To get a local copy up and running, follow these steps.
+The To Do List website provides the following features:
 
-### Prerequisites
+- Add tasks to your to-do list.
+- Mark tasks as completed by checking the checkbox.
+- Reorder tasks by dragging and dropping.
+- Clear all completed tasks with the click of a button.
 
-In order to run this project you need a web browser, node, npm and an IDE like VS Code should be installed in your computer.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+<ul>
+  <li><a href="https://tasnimchy96.github.io/todo-list.github.io/dist/">Live Demo</a></li>
+  <li><a href="https://github.com/tasnimchy96/todo-list.github.io/dist/"><img src="./Capture d'écran 2023-06-17 184926.png" width="50%"></a></li>
+</ul>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 ### Setup
 
-Open Terminal & Clone this repository to your desired folder:
+1. Clone this repository to your desired folder:
 
-```sh
-cd <path-to-the-folder>
-git clone https://github.com/tasnimchy96/awesome-books-es6.git
-cd bookStore.github.io.git
-code .
-```
+git clone https://github.com/tasnimchy96/todo-list.github.io
+
+2. Open the project directory: cd To-Do-List
 
 ### Install
 
-Install this project using the cloned repo or download and use the files to your local machine.
+Install this project with:
 
-```sh
-cd <path-to-the-cloned-repo>
-code .
-```
+<ul>
+  <li>Install the Linters for the  <a href="https://github.com/microverseinc/linters-config/tree/master/html-css-js">HTML-CSS & JS </a> Documents</li>
+  <li>Install the <a href="https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin">webpack configuration </a></li>
+</ul>
 
 ### Usage
 
-To run the project open the index.html file in your web browser or you can also open live server from the IDE.
+1. Clone the repository:
 
-### Run tests
+   ```shell
+   git clone <https://github.com/tasnimchy96/todo-list.github.io>
+   ```
 
-No test are available
+2. Open the index.html file in a web browser.
 
-### Project-Presentation
+3. Start managing your to-do list!
 
-- We will add it later.
+### Run test
 
-### :rocket: Live-Demo
+to run the tests to make sure no Linters errors, run the following command:
 
-- [Live-Demo]()
+<ul>
+  <li>npx stylelint "**/*.{css,scss}"</li>
+  <li>npx eslint .</li>
+</ul>
 
-## :busts_in_silhouette: Authors
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-:bust_in_silhouette: **Tasnim Ahmed Chowdhury**
+## 👥 Authors <a name="authors"></a>
+
+👤 **Tasnim Ahmed Chowdhury**
 
 - GitHub: [@tasnimchy96](https://github.com/tasnimchy96)
 - Twitter:[@tasnimchy96](https://twitter.com/tasnimchy96)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tasnim-ahmed-chowdhury-b4504625b)
 
-## :telescope: Future Features
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### 🔭 Future Features <a name="Future Features"></a>
 
-## :handshake: Contributing
+- Project 1: List structure.
+- Project 2: Add and remove items.
+- Project 3: Interactive list.
 
-Contributions, issues, and feature requests are welcome!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
 Feel free to check the [issues page](../../issues/).
 
-## :star:️ Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you like this project feel free to share with your friends.
+<!-- SUPPORT -->
 
-## :pray: Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
-I would like to thank Microverse for this amazing exercise.
+If you find this project helpful or interesting, please give it a star ⭐️ on GitHub.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+thanks to my codding partner for the help
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
