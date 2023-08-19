@@ -1,17 +1,17 @@
 // Array of tasks
 const tasks = [
   {
-    description: "Task 1",
+    description: 'Task 1',
     completed: false,
     index: 1,
   },
   {
-    description: "Task 2",
+    description: 'Task 2',
     completed: true,
     index: 2,
   },
   {
-    description: "Task 3",
+    description: 'Task 3',
     completed: false,
     index: 3,
   },
@@ -19,14 +19,14 @@ const tasks = [
 
 // Function to populate the task list
 function displayTaskList() {
-  const taskList = document.getElementById("task-list");
+  const taskList = document.getElementById('task-list');
 
   // Clear any existing tasks
-  taskList.innerHTML = "";
+  taskList.innerHTML = '';
 
   // Iterate over tasks and create list items
   tasks.forEach((task) => {
-    const listItem = document.createElement("li");
+    const listItem = document.createElement('li');
     listItem.innerHTML = `
           <input type="checkbox" name="" id="" />
           <span>${task.description}</span>
@@ -58,11 +58,11 @@ function displayTaskList() {
             </g>
           </svg>
         `;
-    listItem.classList.add(task.completed ? "completed" : "pending", "task");
+    listItem.classList.add(task.completed ? 'completed' : 'pending', 'task');
 
     taskList.appendChild(listItem);
   });
 }
 
 // Event listener for page load
-document.addEventListener("DOMContentLoaded", displayTaskList);
+document.addEventListener('DOMContentLoaded', displayTaskList);
