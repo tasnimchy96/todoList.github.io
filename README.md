@@ -21,7 +21,7 @@
 
 # :book: [Awesome Books]
 
-**[Awesome Books]** is a microverse project where we build a basic website that allows users to add/remove books from a list. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events.
+**[To-do-List]** is a microverse project where we build a basic website that allows users to add/remove tasks. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events.
 
 ## :hammer_and_wrench: Built With
 
@@ -49,8 +49,8 @@ Open Terminal & Clone this repository to your desired folder:
 
 ```sh
 cd <path-to-the-folder>
-git clone https://github.com/tasnimchy96/awesome-books-es6.git
-cd bookStore.github.io.git
+git clone https://github.com/tasnimchy96/todoList.github.io
+cd todoList.github.io
 code .
 ```
 
