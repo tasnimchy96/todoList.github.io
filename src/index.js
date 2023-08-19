@@ -1,3 +1,5 @@
+import './style.css'; // Replace with your actual CSS file path
+
 // Array of tasks
 const tasks = [
   {
