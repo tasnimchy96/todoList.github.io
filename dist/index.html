@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List App</title>
+    <link rel="stylesheet" href="./style.css" />
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="print.bundle.js"></script></head>
+  <body>
+    <main id="main-container">
+      <div class="title">
+        To-Do-List
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </div>
+      <form action="" id="add-task">
+        <input type="text" name="" id="" placeholder="Add to your list..." />
+        <svg
+          fill="#000000"
+          width="20px"
+          height="20px"
+          viewBox="0 0 24.00 24.00"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#000000"
+          stroke-width="1.2"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M19,6a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H7.41l1.3-1.29A1,1,0,0,0,7.29,9.29l-3,3a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l3,3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L7.41,14H17a3,3,0,0,0,3-3V7A1,1,0,0,0,19,6Z"
+            ></path>
+          </g>
+        </svg>
+      </form>
+      <ul id="task-list">
+      </ul>
+      <button type="button" class="clear-completed">Clear all completed</button>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/a0e2d1542b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
