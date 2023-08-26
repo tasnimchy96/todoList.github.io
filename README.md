@@ -21,7 +21,7 @@
 
 # :book: [Awesome Books]
 
-**[To-do-List]** is a microverse project where we build a basic website that allows users to add/remove tasks. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events.
+**[To-do-List]** is a microverse project where we build a basic website that allows users to add/remove tasks. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events. we also make the to-do-list-interactive.
 
 ## :hammer_and_wrench: Built With
 
@@ -77,7 +77,7 @@ No test are available
 
 ### :rocket: Live-Demo
 
-- [Live-Demo]()
+- [Live-Demo](https://tasnimchy96.github.io/todoList.github.io/dist/)
 
 ## :busts_in_silhouette: Authors
 
